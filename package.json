@@ -1,11 +1,11 @@
 {
   "name": "yechedmat",
   "version": "1.0.0",
-  "description": "\"Qui paye la tournee ?\"",
-  "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "fthebaud@gmail.com",
-  "license": "ISC"
+  "description": "trying out es6, babel, webpack and boostrap material design",
+  "author": "Fabien Thebaud",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fthebaud/yechedmat.git"
+  }
 }
