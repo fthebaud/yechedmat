@@ -1,21 +1,20 @@
 # Yec'ched mat
 
 This application will randomly choose whose turn it is to pay for the round!
-But it's really just an excuse to try out ES6, Babel, Webpack, grunt watch and Bootstrap (with material design).
-
-## Project setup
+But it's really just an excuse to try out ES6, Babel, Webpack, and Bootstrap (with material design).
 
 ## Commands
 
-### Notes
-Encountered problem while using npm **watch** 0.17.1 on windows :
-
+- Translate JavaScript files from ES6 to ES5 via babel-loader and bundle them together.
 ```sh
-"watch:dev": "node_modules/.bin/watch webpack:dev src"
-> yechedmat@1.0.0 watch:dev D:\labo\yechedmat
-> watch webpack:dev src
-
-> Watching src
-La syntaxe du nom de fichier, de répertoire ou de volume est incorrecte.
-
+npm run webpack
+```
+- Same as above + rerun the whole process every time a file is modified.
+```sh
+webpack:watch
+```
+- Same as above + launch a  node.js Express server serving the application. Application is automatically reloaded every time a file is changed.
+```sh
+# Application will be live at http://localhost:9090
+webpack:devserver
 ```

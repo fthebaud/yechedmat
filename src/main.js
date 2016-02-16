@@ -1,7 +1,7 @@
 import randomPicker from "./utils/pickAtRandom";
 
 function getRandomName() {
-  var names = ['patrick', 'bob', 'carlos'];
+  var names = ['Patrick!', 'Bob!', 'Carlo!'];
   return randomPicker(names);
 }
 
