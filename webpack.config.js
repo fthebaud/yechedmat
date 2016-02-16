@@ -14,12 +14,27 @@ module.exports = {
   // babel loader, testing for files that have a .js extension (except for files in our node_modules folder!)
   module: {
     loaders: [{
-      loader: "babel-loader",
       test: /\.js$/,
+      loader: "babel-loader",
       exclude: /node_modules/,
       query: {
         compact: false // because I want readable output
       }
+    }, {
+      test: /\.css$/,
+      loader: "style-loader!css-loader"
+    }, {
+      test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+      loader: "file"
+    }, {
+      test: /\.(woff|woff2)$/,
+      loader: "url"
+    }, {
+      test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+      loader: "url"
+    }, {
+      test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+      loader: "url"
     }]
   },
   devServer: {
