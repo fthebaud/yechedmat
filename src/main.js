@@ -1,4 +1,8 @@
-import randomPicker from "pickAtRandom";
+import randomPicker from "./utils/pickAtRandom";
 
-// var names = ['Romain', 'Gaetan', 'Julien'];
-// console.log(randomPicker(names));
+function getRandomName() {
+  var names = ['patrick', 'bob', 'carlos'];
+  return randomPicker(names);
+}
+
+export { getRandomName };

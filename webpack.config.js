@@ -1,10 +1,9 @@
 module.exports = {
-  // babel loader, testing for files that have a .js extension
-  // (except for files in our node_modules folder!).
+  // babel loader, testing for files that have a .js extension (except for files in our node_modules folder!)
   module: {
     loaders: [
       {
-        loader: "babel-cli",
+        loader: "babel-loader",
         test: /\.js$/,
         exclude: /node_modules/,
         query: {
