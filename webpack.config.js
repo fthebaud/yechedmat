@@ -1,6 +1,6 @@
 module.exports = {
   // entry is the "main" source file we want to include/import
-  entry: "./src/main.js",
+  entry: "./app/main.js",
   // output tells webpack where to put the bundle it creates
   output: {
     // in the case of a "plain global browser library", this will be used as the reference
@@ -9,7 +9,7 @@ module.exports = {
     // We want webpack to build a UMD wrapper for our module
     libraryTarget: "umd",
     // the destination file name
-    filename: "lib/yechedmat.js"
+    filename: "built/yechedmat-bundle.js"
   },
   // babel loader, testing for files that have a .js extension (except for files in our node_modules folder!)
   module: {
@@ -20,26 +20,11 @@ module.exports = {
       query: {
         compact: false // because I want readable output
       }
-    }, {
-      test: /\.css$/,
-      loader: "style-loader!css-loader"
-    }, {
-      test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-      loader: "file"
-    }, {
-      test: /\.(woff|woff2)$/,
-      loader: "url"
-    }, {
-      test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-      loader: "url"
-    }, {
-      test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-      loader: "url"
     }]
   },
   devServer: {
     "port": 9090,
-    "contentBase": "src",
+    "contentBase": "app",
     "inline": true, //automatically reload page
     "stats": {
       colors: true
