@@ -23,8 +23,7 @@
     "webpack-dev-server": "1.14.1"
   },
   "scripts": {
-    "webpack": "webpack --progress --color",
-    "webpack:watch": "webpack --progress --color --watch",
+    "build:dev": "grunt build:dev && webpack",
     "serve:dev": "grunt build:dev && webpack-dev-server"
   }
 }
