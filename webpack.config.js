@@ -8,10 +8,12 @@ module.exports = {
     library: "yechedmat",
     // We want webpack to build a UMD wrapper for our module
     libraryTarget: "umd",
-    // the destination file name
+    // the destination bundle file name
     filename: "yechedmat-bundle.js",
-    //TODO FTH
-    publicPath: "/built/",
+    // destination path for the bundle file
+    path: "app/built",
+    // path when the bundle is served from memory by the devServer 
+    publicPath: "/built/"
   },
   // babel loader, testing for files that have a .js extension (except for files in our node_modules folder!)
   module: {
