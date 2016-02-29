@@ -12,7 +12,7 @@ module.exports = {
     filename: "yechedmat-bundle.js",
     // destination path for the bundle file
     path: "app/built",
-    // path when the bundle is served from memory by the devServer 
+    // path when the bundle is served from memory by the devServer
     publicPath: "/built/"
   },
   // babel loader, testing for files that have a .js extension (except for files in our node_modules folder!)
@@ -26,6 +26,10 @@ module.exports = {
       }
     }]
   },
+  devtool: "sourcemap",
+  debug: true,
+
+  //webpack-dev-server configuration
   devServer: {
     "port": 9090,
     "contentBase": "app",
